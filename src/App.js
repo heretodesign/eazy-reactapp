@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Button, table, thead, tbody, columns, column} from "react-bulma-components/full"
+import 'react-bulma-components/dist/react-bulma-components.min.css'
+import { Route, Link } from "react-router-dom"
+import Nav from './components/layouts/Nav'
+import ListPage from './pages/ListPage.js'
+
+import axios from 'axios'
+import './App.scss'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Route exact path="/" component={ListPage} />
+
     </div>
   );
 }

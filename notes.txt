@@ -1,0 +1,4 @@
+
+
+<Route path="/pages/new" component={CreateNewNotice} />
+<Route path="/pages/detail/:id" component={DetailPage} />
