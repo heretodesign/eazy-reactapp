@@ -1,4 +1,91 @@
+<div class="columns is-mobile" id="flexgrid" key={item.id}>
+  <div class="column is-2">
+    <div class="box" id="box">
+    <div class="media-center">
+      <figure class="image is-120x50">
+        <img width="140" height="80" src={`${process.env.PUBLIC_URL}${item.attributes.links.image}`} />
+      </figure>
+    </div>
+      <p class="subtitle has-text-black-ter" id="title"><span class="text-center">{item.attributes.title}</span></p>
+      <p class="title is-6"><span class="text-center">{item.attributes.price}</span></p>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+  <h3 className="title is-uppercase has-text-left is-6">Listings</h3>
+  <div class="notification">
+    <div className="columns is-multiline is-2">
+        {
+          this.state.items.map(item =>
+            <div class="column " id="box">
+              <div class="box is-2" id="box">
+                <div class="media-center">
+                  <figure class="image is-120x50">
+                    <img width="140" height="80" src={`${process.env.PUBLIC_URL}${item.attributes.links.image}`} />
+                  </figure>
+                </div>
+                  <p class="subtitle has-text-black-ter" id="title"><span class="text-center">{item.attributes.title}</span></p>
+                  <p class="title is-6"><span class="text-center">{item.attributes.price}</span></p>
+                </div>
+            </div>
+          )
+        }
+    </div>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-2">
+  <div class="card">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" />
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="subtitle is-6">Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</p>
+        </div>
+      </div>
+      <div class="content">
+        <p class="title is-6">RM2000</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
 
 <Route path="/pages/new" component={CreateNewNotice} />
 <Route path="/pages/detail/:id" component={DetailPage} />
+
+<Route exact path="/" render={props => <HomePage {...props} users={this.state.users} />} />
+<Route path="/users/:id" component={props => {return(<UserProfilePage {...props} users={this.state.users} />)}} />
+
+A month from today I’ll say the easiest yes I’ll ever choose.
+Because when you walked into my life, there was a settling in my soul that love doesn’t get removed.
+ & that God was beginning to write the greatest victory story my heart had ever known. I can’t wait for this chapter.
+
+05 Aug, somewhat 22 years ago this young man walked into our lives.
+Full of life, full of potential..wiser than any other kid in the block.
+That day there was a settling in my soul that love doesn’t get removed,
+an unending joy in our family that you were what our lives always needed,
+
+an unreasonable believe that one day we are going to see God write
+
+Your greatest and your best days are ahead of you. Heads high & work hard
+
+lists.links.image
+
+
+
+// componentDidMount() {
+//   fetch('http://5b35ede16005b00014c5dc86.mockapi.io/list')
+//   .then(res => res.json())
+//   .then((data) => {
+//     console.log(data.data);
+//     this.setState({ items: data.data })
+//   })
+//   .catch(console.log)
+// }

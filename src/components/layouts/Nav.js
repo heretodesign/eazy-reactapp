@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Columns, Navbar, Header} from "react-bulma-components/full"
+import { Columns, Navbar } from "react-bulma-components/full"
 import 'react-bulma-components/dist/react-bulma-components.min.css'
 
 function Nav() {
@@ -21,16 +21,16 @@ function Nav() {
 
             <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-end">
-                <a class="navbar-item">
+                <a className="navbar-item">
                   Categories
                 </a>
-                <a class="navbar-item">
+                <a className="navbar-item">
                   Notification
                 </a>
-                <a class="navbar-item">
+                <a className="navbar-item">
                   Login/Sign up
                 </a>
-                <a class="navbar-item">
+                <a className="navbar-item">
                   Help
                 </a>
             </div>
