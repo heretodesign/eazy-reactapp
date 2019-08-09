@@ -1,3 +1,51 @@
+
+title
+image
+description
+
+<figure class="image is-64x64">
+        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+      </figure>
+
+<Route path="/items/:id" component={props => {return(<ViewPage {...props} users={this.state.items} />)}} />
+
+
+{
+  this.state.items.map(item =>
+    <div className="column box is-2" id="box">
+      <div className="media-center">
+        <figure className="image is-120x50">
+          <img width="140" height="80" src={`${process.env.PUBLIC_URL}${item.attributes.links.image}`} />
+        </figure>
+      </div>
+      <div className="content">
+        <p href="#" className="subtitle has-text-black-ter" id="title"><span class="text-center">{item.attributes.title}</span></p>
+      </div>
+      <div className="content">
+        <p href="#" className="title is-6 is-white"><span class="text-center">{item.attributes.price}</span></p>
+      </div>
+    </div>
+  )
+}
+
+
+
+componentDidMount = async (e) => {
+  const response = await axios.get('http://5b35ede16005b00014c5dc86.mockapi.io/list')
+    .then(response => {
+      this.setState({
+        items: response.data.data
+      })
+      console.log(response.data.data);
+    })
+  .catch(error => {
+    console.log('ERROR: ', error)
+  })
+}
+
+
+
+
 <div class="columns is-mobile" id="flexgrid" key={item.id}>
   <div class="column is-2">
     <div class="box" id="box">

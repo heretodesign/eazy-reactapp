@@ -16,7 +16,7 @@ function App() {
       <Nav />
       <Header />
       <Route exact path="/" component={ListPage} />
-      <Route path="/pages/viewpage" component={ViewPage} />
+      <Route path="/pages/viewpage/:id" component={ViewPage} />
     </section>
   );
 }
