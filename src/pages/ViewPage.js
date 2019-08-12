@@ -21,6 +21,10 @@ class ViewPage extends React.Component {
 
   render() {
     if (!this.state.item) return 'Loading...'
+    const {description} = this.state.item; {/* Attempt to replace all \n line breaks with <br /> globally*/}
+    const newDescription = {
+      __html: description.replace(/\n|\\n/g, "<br/>")
+    }
     return (
       <>
         <div className="container">
@@ -38,8 +42,8 @@ class ViewPage extends React.Component {
                     </div>
                     <div className="content">
                       <h3 class="title has-text-danger has-text-left">Description</h3>
-                      <p class="subtitle">
-                          {this.state.item.description}
+                      <p class="subtitle has-text-left">
+                          <div dangerouslySetInnerHTML={newDescription} />
                       </p>
                     </div>
                   </div>
@@ -72,7 +76,7 @@ class ViewPage extends React.Component {
                         <div class="buttons are-medium">
                           <a class="button is-danger is-outlined is-fullwidth">
                             <i class="fas fa-phone-alt"></i>
-                            017 6895xxx
+                            {this.state.item.phone}
                           </a>
                           <a class="button is-danger is-outlined is-fullwidth">
                             <i class="fas fa-comment-alt"></i>
