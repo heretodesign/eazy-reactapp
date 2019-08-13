@@ -21,7 +21,7 @@ class ViewPage extends React.Component {
 
   render() {
     if (!this.state.item) return 'Loading...'
-    const {description} = this.state.item; {/* Attempt to replace all \n line breaks with <br /> globally*/}
+    const {description} = this.state.item; {/* My Attempt to replace all \n line breaks with <br /> globally*/}
     const newDescription = {
       __html: description.replace(/\n|\\n/g, "<br/>")
     }
@@ -33,7 +33,7 @@ class ViewPage extends React.Component {
                 <div class="column">
                   <div class="box">
                     <div className="content">
-                      <p class="title is-5 has-text-left">{this.state.item.title}</p>
+                      <p class="title is-5 has-text-left is-size-6-mobile">{this.state.item.title}</p>
                     </div>
                     <div className="content">
                       <figure class="image is-1by1">
@@ -41,32 +41,32 @@ class ViewPage extends React.Component {
                       </figure>
                     </div>
                     <div className="content">
-                      <h3 class="title has-text-danger has-text-left">Description</h3>
-                      <p class="subtitle has-text-left">
+                      <h3 class="title has-text-danger has-text-left is-size-6-mobile">Description</h3>
+                      <p class="subtitle has-text-left is-size-7-mobile">
                           <div dangerouslySetInnerHTML={newDescription} />
                       </p>
                     </div>
                   </div>
                 </div>
                 <hr />
-                <div class="column is-narrow">
+                <div class="column is-narrow-desktop">
                   <div class="box">
                     <div>
                       <div className="content">
-                        <p class=" is-6 has-text-left">Price</p>
-                        <p class="has-text-danger is-5 has-text-left">{this.state.item.price}</p>
+                        <p class=" is-6 has-text-left is-size-6-mobile">Price</p>
+                        <p class="has-text-danger is-5 is-size-7-mobile has-text-left">{this.state.item.price}</p>
                       </div>
                       <div className="content">
-                        <p class=" is-5 has-text-left">Item Condition</p>
-                        <p class=" is-5 has-text-left">{this.state.item.condition}</p>
+                        <p class=" is-5 has-text-left is-size-6-mobile">Item Condition</p>
+                        <p class=" is-5 has-text-left is-size-7-mobile">{this.state.item.condition}</p>
                       </div>
                       <div className="content">
-                        <p class=" is-5 has-text-left">Item location</p>
-                        <p class=" is-5 has-text-left">{this.state.item.location}</p>
+                        <p class=" is-5 has-text-left is-size-6-mobile">Item location</p>
+                        <p class=" is-5 has-text-left is-size-7-mobile">{this.state.item.location}</p>
                       </div>
                       <div className="content">
-                        <p class=" is-5 has-text-left">Seller</p>
-                        <p class=" is-5 has-text-left">{this.state.item.seller_name}</p>
+                        <p class=" is-5 has-text-left is-size-6-mobile">Seller</p>
+                        <p class=" is-5 has-text-left is-size-7-mobile">{this.state.item.seller_name}</p>
                       </div>
                     </div>
                     <hr />

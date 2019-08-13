@@ -26,12 +26,12 @@ class ListPage extends React.Component {
 
       return (
         <>
-          <div className="container">
-            <div className="notification">
-              <div className="columns is-multiline is-2-mobile is-4-tablet is-3-desktop is-8-widescreen">
+          <div className="container" id="containerListview">
+            <div className="notification" id="notiStyle">
+              <div className="columns is-multiline is-mobile">
                   {
                     this.state.items.map(item =>
-                      <div className="column box is-2" id="box">
+                      <div className="column box is-2 is-one-third-mobile is-one-third-tablet is-one-sixth-desktop" id="box">
                         <div className="media-center">
                           <Link to={`/pages/viewpage/${item.id}`}>
                             <figure className="image is-120x50">
@@ -43,7 +43,7 @@ class ListPage extends React.Component {
                           <p href="#" className="subtitle has-text-black-ter" id="title"><span class="text-center">{item.attributes.title}</span></p>
                         </div>
                         <div className="content">
-                          <p href="#" className="title is-6 is-white"><span class="text-center">{item.attributes.price}</span></p>
+                          <p href="#" className="title is-6 is-white"><span class="text-center" id="price">{item.attributes.price}</span></p>
                         </div>
                       </div>
                     )

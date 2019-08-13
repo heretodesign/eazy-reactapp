@@ -8,8 +8,8 @@ function Nav() {
       <div className="container is-primary">
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item" href="https://www.letsumai.com/for-restaurants">
-                  <span className="is-siz-7 has-text-weight-bold has-text-danger"><strong className="is-size-3  has-text-danger">eazy</strong>.my</span>
+                <a className="navbar-item" href="#">
+                  <span className="is-siz-7 has-text-weight-bold" id="eazyLogo"><strong className="is-size-3">eazy</strong>.my</span>
                 </a>
 
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
