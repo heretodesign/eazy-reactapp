@@ -2,6 +2,13 @@ import React from 'react'
 import axios from 'axios'
 import { Button } from "react-bulma-components/full"
 import 'react-bulma-components/dist/react-bulma-components.min.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faComment, faEnvelope  } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+// import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faPhone, faComment, faEnvelope
+)
 
 class ViewPage extends React.Component {
   state = {
@@ -33,7 +40,7 @@ class ViewPage extends React.Component {
                 <div class="column">
                   <div class="box">
                     <div className="content">
-                      <p class="title is-5 has-text-left is-size-6-mobile">{this.state.item.title}</p>
+                      <p class="title is-5 has-text-left is-size-6-mobile" id="viewTitle">{this.state.item.title}</p>
                     </div>
                     <div className="content">
                       <figure class="image is-1by1">
@@ -41,50 +48,52 @@ class ViewPage extends React.Component {
                       </figure>
                     </div>
                     <div className="content">
-                      <h3 class="title has-text-danger has-text-left is-size-6-mobile">Description</h3>
-                      <p class="subtitle has-text-left is-size-7-mobile">
+                      <h3 class="title has-text-left is-size-6-mobile" id="viewDescription">Description</h3>
+                      <p class="subtitle has-text-left is-size-7-mobile" id="newDescription">
                           <div dangerouslySetInnerHTML={newDescription} />
                       </p>
                     </div>
                   </div>
                 </div>
                 <hr />
-                <div class="column is-narrow-desktop">
+                <div class="column is-narrow-desktop" id="narrowColumn">
                   <div class="box">
                     <div>
                       <div className="content">
-                        <p class=" is-6 has-text-left is-size-6-mobile">Price</p>
-                        <p class="has-text-danger is-5 is-size-7-mobile has-text-left">{this.state.item.price}</p>
+                        <p class=" is-6 has-text-left is-size-6-mobile" id="viewHeader">Price</p>
+                        <p class="is-size-7-mobile has-text-left" id="viewPrice">{this.state.item.price}</p>
                       </div>
                       <div className="content">
-                        <p class=" is-5 has-text-left is-size-6-mobile">Item Condition</p>
-                        <p class=" is-5 has-text-left is-size-7-mobile">{this.state.item.condition}</p>
+                        <p class=" is-5 has-text-left is-size-6-mobile" id="viewHeader">Item Condition</p>
+                        <p class=" is-5 has-text-left is-size-7-mobile" id="viewItem">{this.state.item.condition}</p>
                       </div>
                       <div className="content">
-                        <p class=" is-5 has-text-left is-size-6-mobile">Item location</p>
-                        <p class=" is-5 has-text-left is-size-7-mobile">{this.state.item.location}</p>
+                        <p class=" is-5 has-text-left is-size-6-mobile" id="viewHeader">Item location</p>
+                        <p class=" is-5 has-text-left is-size-7-mobile" id="viewItem">{this.state.item.location}</p>
                       </div>
                       <div className="content">
-                        <p class=" is-5 has-text-left is-size-6-mobile">Seller</p>
-                        <p class=" is-5 has-text-left is-size-7-mobile">{this.state.item.seller_name}</p>
+                        <p class=" is-5 has-text-left is-size-6-mobile" id="viewHeader">Seller</p>
+                        <p class=" is-5 has-text-left is-size-7-mobile" id="viewItem">{this.state.item.seller_name}</p>
                       </div>
                     </div>
-                    <hr />
+                    <hr id="separator" />
                     <div>
-                      <p class="subtitle is-6">Interested in the ad? Contact the Seller</p>
+                      <p class="subtitle is-6" id="adTitle">Interested in the ad? Contact the Seller</p>
                       <div className="content">
                         <div class="buttons are-medium">
-                          <a class="button is-danger is-outlined is-fullwidth">
-                            <i class="fas fa-phone-alt"></i>
-                            {this.state.item.phone}
+                          <a class="button is-outlined is-fullwidth has-text-left" id="phoneBtn"><span className="has-text-left" id="text">
+                            <FontAwesomeIcon icon="phone" />
+                            {'  '} {this.state.item.phone}</span>
                           </a>
-                          <a class="button is-danger is-outlined is-fullwidth">
-                            <i class="fas fa-comment-alt"></i>
-                            Email
+                          <a class="button is-danger is-outlined is-fullwidth has-text-left" id="mailBtn"><span className="has-text-left" id="mail">
+                              <FontAwesomeIcon icon="envelope" />
+                            {'  '}  Email
+                            </span>
                           </a>
-                          <a class="button is-danger is-fullwidth">
-                            <i class="fas fa-comment-alt"></i>
-                            Chat
+                          <a class="button is-danger is-fullwidth" id="chatBtn"><span id="chat">
+                            <FontAwesomeIcon icon="faComment" color="white" />
+                            {'  '}  Chat
+                            </span>
                           </a>
                         </div>
                       </div>
