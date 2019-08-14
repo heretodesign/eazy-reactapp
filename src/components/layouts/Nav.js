@@ -5,6 +5,7 @@ import 'react-bulma-components/dist/react-bulma-components.min.css'
 function Nav() {
 
   return (
+    <section className="container-fluid is-primary" id="mainSection">
       <div className="container is-primary">
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
@@ -43,6 +44,7 @@ function Nav() {
             </div>
           </nav>
       </div>
+      </section>
   );
 }
 

@@ -27,11 +27,11 @@ class ListPage extends React.Component {
       return (
         <>
           <div className="container" id="containerListview">
-            <div className="notification" id="notiStyle">
+            <div className="content" id="notiStyle">
               <div className="columns is-multiline is-mobile">
                   {
                     this.state.items.map(item =>
-                      <div className="column box is-2 is-one-third-mobile is-one-third-tablet is-one-sixth-desktop" id="box">
+                      <div className="column box is-2 is-one-third-mobile is-one-third-tablet is-one-third-desktop" id="box">
                         <div className="media-center">
                           <Link to={`/pages/viewpage/${item.id}`}>
                             <figure className="image is-120x50">

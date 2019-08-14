@@ -2,6 +2,7 @@
 
 #containerListview {
     display: flex;
+    background-color: #FFFFFF;
 }
 
 #flexgrid {
@@ -16,8 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding: 1rem 6rem;
-  // padding-bottom: 100px;
+  padding: 3rem 6rem;
+  padding-bottom: 100px;
 }
 
 #box {
