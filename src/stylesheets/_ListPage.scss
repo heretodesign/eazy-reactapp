@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+
+@mixin phone {
+  @media (max-width: 768px) { @content; }
+}
 
 #containerListview {
     display: flex;
@@ -17,16 +24,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 6rem;
   padding-bottom: 100px;
+
+    @include desktop {
+    padding: 3rem 6rem;
+  }
+
+  @include phone {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+#mulitlineColumn {
+  justify-content: center;
 }
 
 #box {
+  display: block;
   width: 140px;
+  height: 186px;
   align-items: center;
   justify-content: center;
   text-align: left;
-  margin: 5px 10px;
+  margin: 10px 10px;
   text-decoration: none;
   border-color: #D8D8D8;
 }
@@ -60,4 +81,8 @@
   justify-content: left;
   align-items: flex-start;
   padding-left: 90px;
+
+  @include phone {
+    padding-left: 30px;
+  }
 }

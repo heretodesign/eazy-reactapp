@@ -43,9 +43,7 @@ class ListPage extends React.Component {
           </div>
           <div className="container" id="containerListview">
             <div className="content" id="notiStyle">
-
-              <div className="columns is-multiline is-mobile">
-
+              <div className="columns is-multiline is-mobile" id="mulitlineColumn">
                   {
                     this.state.items.map(item =>
                       <div className="column box is-2 is-one-third-mobile is-one-third-tablet is-one-third-desktop" id="box">
