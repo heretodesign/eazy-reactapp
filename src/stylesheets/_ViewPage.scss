@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+
+@mixin phone {
+  @media (max-width: 768px) { @content; }
+}
+
+#viewpageContainer {
+  padding-top: 20px;
+}
 
 #narrowColumn {
   border: 1px solid #F0F0EE;

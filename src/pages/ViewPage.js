@@ -35,8 +35,8 @@ class ViewPage extends React.Component {
     }
     return (
       <>
-        <div className="container">
-          <div className="notification">
+        <div className="container has-background-white" id="viewpageContainer">
+          <div className="content">
               <Header />
             <div class="columns">
                 <div class="column">
@@ -103,25 +103,125 @@ class ViewPage extends React.Component {
                   </div>
                 </div>
               </div>
-              <div class="columns">
-                <div class="column">
-                <div className="content">
-                  <p class="title is-5 has-text-left">Similar Items</p>
-                </div>
-                <div className="column box is-2" id="box">
-                  <div className="media-center">
-                    <figure className="image is-120x50">
-                      <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image" />
-                    </figure>
+              <div class="section is-multiline is-mobile">
+                <div class="top">
+                  <div className="content" id="simContent">
+                    <p class="title is-5 has-text-left">Similar Items</p>
                   </div>
-                  <div className="content">
-                    <p href="#" className="subtitle has-text-black-ter" id="title"><span class="text-center">
-                    Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                  <div class="columns is-multiline ">
+                    <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
+                    <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
+                    <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
+                    <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
+                    <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
+                    <div class="column box is-2  is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
+                    <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
+                    <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
+                      <div className="media-center">
+                        <figure className="image is-108x76">
+                          <img width="128" height="128" src={`${process.env.PUBLIC_URL}${this.state.image}`} alt="Image" />
+                        </figure>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="subtitle has-text-black-ter" id="simTitle"><span class="text-center">
+                        Nintendo Switch Neon Joy-Con (1 Year MaxSoft Warranty) + Screen Protector</span></p>
+                      </div>
+                      <div className="content">
+                        <p href="#" className="title is-6 is-white" id="simPrice"><span class="text-center">RM 1,289</span></p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="content">
-                    <p href="#" className="title is-6 is-white"><span class="text-center">RM 1,289</span></p>
-                  </div>
-                </div>
                 </div>
               </div>
           </div>

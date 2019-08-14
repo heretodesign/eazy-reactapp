@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+
+@mixin phone {
+  @media (max-width: 768px) { @content; }
+}
+
+#simContent {
+    justify-content: center;
+}
+
+#SimilarBox {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin: 0 6px;
+  text-decoration: none;
+  border: 1px solid #F0F0EE;
+  border-radius: 2px;
+  opacity: 1;
+  width: 123px;
+  height: 137px;
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 6px 6px;
+    text-decoration: none;
+    border: 1px solid #F0F0EE;
+    border-radius: 2px;
+    opacity: 1;
+    width: 123px;
+    height: 137px;
+  }
+}
+
+#simTitle {
+  @include desktop {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: #707070;
+    opacity: 1;
+    width: 117px;
+    height: 32px;
+}
+
+  @include phone {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: #707070;
+    opacity: 1;
+    width: 117px;
+    height: 32px;
+  }
+}
+
+
+#simPrice {
+  @include desktop {
+    // width: 50px;
+    height: 18px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #E01A1A;
+    opacity: 1;
+}
+
+  @include phone {
+    // width: 50px;
+    height: 18px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #E01A1A;
+    opacity: 1;
+  }
+}
