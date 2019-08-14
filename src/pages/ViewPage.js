@@ -5,7 +5,8 @@ import 'react-bulma-components/dist/react-bulma-components.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faComment, faEnvelope  } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+import Header from '../components/layouts/Header'
+import Sticky from 'react-sticky-el'
 
 library.add(faPhone, faComment, faEnvelope
 )
@@ -36,6 +37,7 @@ class ViewPage extends React.Component {
       <>
         <div className="container">
           <div className="notification">
+              <Header />
             <div class="columns">
                 <div class="column">
                   <div class="box">

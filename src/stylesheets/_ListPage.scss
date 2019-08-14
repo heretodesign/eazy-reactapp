@@ -49,3 +49,15 @@
 #listing-header {
   position: fixed;
 }
+
+#stckyContainer {
+  margin-top: 20px;
+}
+
+#floatingElement {
+  display: block!important;
+  font-size: 20px;
+  justify-content: left;
+  align-items: flex-start;
+  padding-left: 90px;
+}

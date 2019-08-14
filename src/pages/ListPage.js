@@ -3,6 +3,8 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { Button } from "react-bulma-components/full"
 import 'react-bulma-components/dist/react-bulma-components.min.css'
+import Sticky from 'react-sticky-el'
+import Header from '../components/layouts/Header'
 
 class ListPage extends React.Component {
   state = {
@@ -26,9 +28,24 @@ class ListPage extends React.Component {
 
       return (
         <>
+        <div className="container  has-background-white" id="stckyContainer">
+          <div className="content">
+              <div className="columns">
+                <div className="column has-text-left">
+                <Sticky>
+                  <header id="floatingElement">
+                    Listings
+                  </header>
+                </Sticky>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="container" id="containerListview">
             <div className="content" id="notiStyle">
+
               <div className="columns is-multiline is-mobile">
+
                   {
                     this.state.items.map(item =>
                       <div className="column box is-2 is-one-third-mobile is-one-third-tablet is-one-third-desktop" id="box">
