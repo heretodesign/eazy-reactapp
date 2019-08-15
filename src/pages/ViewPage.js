@@ -108,7 +108,7 @@ class ViewPage extends React.Component {
                   <div className="content" id="simContent">
                     <p class="title is-5 has-text-left">Similar Items</p>
                   </div>
-                  <div class="columns is-multiline ">
+                  <div class="columns is-multiline  is-mobile">
                     <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
                       <div className="media-center">
                         <figure className="image is-108x76">
