@@ -3,12 +3,12 @@ import axios from 'axios'
 import { Button } from "react-bulma-components/full"
 import 'react-bulma-components/dist/react-bulma-components.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faComment, faEnvelope  } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faComment, faEnvelope, faUserCircle  } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
-import Header from '../components/layouts/Header'
+import TopItemMenu from '../components/contents/TopItemMenu'
 import Sticky from 'react-sticky-el'
 
-library.add(faPhone, faComment, faEnvelope
+library.add(faPhone, faComment, faEnvelope, faUserCircle
 )
 
 class ViewPage extends React.Component {
@@ -37,7 +37,7 @@ class ViewPage extends React.Component {
       <>
         <div className="container has-background-white" id="viewpageContainer">
           <div className="content">
-              <Header />
+              <TopItemMenu />
             <div class="columns">
                 <div class="column">
                   <div class="box">
@@ -75,7 +75,7 @@ class ViewPage extends React.Component {
                       </div>
                       <div className="content">
                         <p class=" is-5 has-text-left is-size-6-mobile" id="viewHeader">Seller</p>
-                        <p class=" is-5 has-text-left is-size-7-mobile" id="viewItem">{this.state.item.seller_name}</p>
+                        <p class=" is-5 has-text-left is-size-7-mobile" id="viewItem"><FontAwesomeIcon icon="user-circle"  /> {this.state.item.seller_name}</p>
                       </div>
                     </div>
                     <hr id="separator" />
@@ -93,7 +93,7 @@ class ViewPage extends React.Component {
                             </span>
                           </a>
                           <a class="button is-danger is-fullwidth" id="chatBtn"><span id="chat">
-                            <FontAwesomeIcon icon="faComment" color="white" />
+                            <FontAwesomeIcon icon="comment"  />
                             {'  '}  Chat
                             </span>
                           </a>
@@ -108,7 +108,7 @@ class ViewPage extends React.Component {
                   <div className="content" id="simContent">
                     <p class="title is-5 has-text-left">Similar Items</p>
                   </div>
-                  <div class="columns is-multiline  is-mobile">
+                  <div class="columns is-multiline is-mobile" id="simColumns">
                     <div class="column box is-2 is-one-third-mobile" id="SimilarBox">
                       <div className="media-center">
                         <figure className="image is-108x76">
